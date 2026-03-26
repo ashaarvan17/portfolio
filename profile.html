@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asha's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #f9fafb;
+      color: #111827;
+      line-height: 1.7;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 12%;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+    }
+
+    header h2 {
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #374151;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #111827;
+    }
+
+    section {
+      padding: 80px 12%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero {
+      height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 600;
+    }
+
+    .hero span {
+      color: #2563eb;
+    }
+
+    .hero p {
+      margin: 15px 0 25px;
+      color: #6b7280;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      border-radius: 6px;
+      width: fit-content;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #2563eb;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #4b5563;
+      max-width: 700px;
+    }
+
+    .skills {
+      margin-top: 30px;
+    }
+
+    .skill {
+      margin-bottom: 15px;
+    }
+
+    .skill-name {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .skill-bar {
+      width: 100%;
+      height: 8px;
+      background: #e5e7eb;
+      border-radius: 5px;
+    }
+
+    .skill-fill {
+      height: 8px;
+      background: #2563eb;
+      border-radius: 5px;
+    }
+
+    .projects .project {
+      background: #ffffff;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+      transition: 0.3s;
+    }
+
+    .projects .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project h3 {
+      margin-bottom: 8px;
+    }
+
+    .project p {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+    }
+
+    .contact button {
+      margin-top: 10px;
+      padding: 12px;
+      border: none;
+      background: #111827;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #6b7280;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h5> Welcome! </h5>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Hello, I'm <span>ASHA</span></h1>
+  <p>Frontend Developer | HTML • CSS • JavaScript</p>
+  <a href="#contact" class="btn">Contact Me</a>
+</section>
+
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>
+    I am a Frontend Developer who focuses on building clean, responsive and user-friendly
+    websites. I enjoy turning ideas into real websites using modern web technologies.
+  </p>
+
+  <div class="skills">
+    <div class="skill">
+      <div class="skill-name">HTML</div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">CSS</div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">JavaScript</div>
+      <div class="skill-bar"><div class="skill-fill" style="width: 75%;"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>digital gallery</h3>
+    <p>Personal website to showcase your photos.</p>
+  </div>
+
+  <div class="project">
+    <h3>Timer</h3>
+    <p>Innovative timer system.</p>
+  </div>
+
+  <div class="project">
+    <h3>Landing Page</h3>
+    <p>Responsive product landing page built using HTML, CSS and JavaScript.</p>
+  </div>
+
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+<form onsubmit="sendMessage(event)">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+  <p style="margin-top:20px;">
+  Email: <a href="mailto:ashaarvankar17@gmail.com">
+    ashaarvankar17@gmail.com
+  </a>
+</p>
+
+<p> Connect on LinkedIn :
+  <a href="https://www.linkedin.com/in/asha-arvankar" target="_blank">
+    Asha Arvankar
+  </a>
+</p>
+</section>
+
+<footer>
+  <p>© 2026 Asha • Frontend Developer</p>
+</footer>
+
+<script>
+function sendMessage(event) {
+  event.preventDefault();
+
+  emailjs.sendForm(
+    "service_ct1fjbg",
+    "template_qc9rdns",
+    event.target
+  )
+  .then(function() {
+    alert("✅ Message sent successfully!");
+  }, function(error) {
+    alert("❌ Failed to send message.");
+    console.log(error);
+  });
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function(){
+    emailjs.init("kMHMuRPT13MGsbVZm");
+  })();
+</script>
+</body>
+</html>
